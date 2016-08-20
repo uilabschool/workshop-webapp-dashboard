@@ -5,6 +5,11 @@
     <title>Front-end Desenvolvendo um Dashboard com Twitter Boostrap</title>
 
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/uilab-font.css">
+
     <link rel="stylesheet" href="css/main.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -15,6 +20,483 @@
     <![endif]-->
 </head>
 <body>
+    <header class="header navbar navbar-default navbar-fixed-top">
+        <div class="pull-left">
+            <a href="#" class="logo pull-left">
+                <img src="img/logo-uilab.png" class="img-responsive">
+            </a>
+
+            <form action="#" class="form-busca relative pull-left">
+                <input type="text" name="nome" class="form-control">
+
+                <button type="submit" class="absolute">
+                    <i class="icon-busca"></i>
+                </button>
+            </form>
+        </div>
+        <div class="pull-right">
+            <div class="dropdown-header dropdown">
+                <span class="dropdown-toggle show" data-toggle="dropdown">
+                    <img src="img/avatar-masc.png" height="32" width="32">
+
+                    <span class="caret"></span>
+                </span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Minha Conta</a></li>
+                    <li><a href="#">Minhas Tarefas</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <aside class="sidebar col-sm-3 col-md-2">
+        <ul class="sidebar-nav row">
+            <li>
+                <a href="#" class="show relative">
+                    <i class="icon-pagina-inicial relative"></i> Página inicial
+                </a>
+            </li>
+            <li>
+                <a href="#" class="show relative">
+                    <i class="icon-documentos relative"></i> Documentos <span class="label-contador label absolute text-center">8</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="active show relative">
+                    <i class="icon-tarefas relative"></i> Tarefas <span class="label-contador label absolute text-center">4</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="show relative">
+                    <i class="icon-equipe relative"></i> Equipe
+                </a>
+            </li>
+            <li>
+                <a href="#" class="show relative">
+                    <i class="icon-chat relative"></i> Chat
+                </a>
+            </li>
+            <li>
+                <a href="#" class="show relative">
+                    <i class="icon-mensagens relative"></i> Mensagens
+                </a>
+            </li>
+            <li>
+                <a href="#" class="show relative">
+                    <i class="icon-relatorios relative"></i> Relatórios
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+        <div class="conteudo">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="linha linha-grande">
+                            <label class="label-checkbox relative">
+                                <input class="pull-left" name="task" type="checkbox" value="Integrar Paypal e Stripe no checkout">
+                                <span class="text-label relative">
+                                    Integrar Paypal e Stripe no checkout
+                                </span>
+                            </label>
+                        </div>
+                        <div class="linha">
+                            <span class="legenda relative">
+                                <i class="label-quadrado inline-block bg-azul absolute"></i> Projeto:
+                            </span> <span class="text-label">Pagamentos</span>
+                        </div>
+                        <div class="linha-odd linha clearfix">
+                            <div>
+                                <span class="legenda relative">
+                                    <i class="label-circulo inline-block bg-vermelho absolute"></i> Prioridade:
+                                </span> <span class="text-label">Alta</span>
+                            </div>
+
+                            <div>
+                                <span class="legenda relative">
+                                    Prazo:
+                                </span> <span class="text-label">Hoje</span>
+                            </div>
+
+                            <hr class="hr-card"></hr>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetu adipiscing elit. Nunc ac diam mattis.
+                            </p>
+                        </div>
+                        <div class="comentarios linha">
+                            <div class="comentario relative">
+                                <img src="img/avatar-masc.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Helder Burato</strong>
+
+                                <p>
+                                    Vestibulum sodales metus. Semper nunc faucibus integer!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="linha-form linha">
+                            <form class="form-comentario">
+                                <input type="text" name="comentario" class="campo-comentario form-control" placeholder="Add comment …">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="linha linha-grande">
+                            <label class="label-checkbox relative">
+                                <input class="pull-left" name="task" type="checkbox" value="Integrar Paypal e Stripe no checkout">
+                                <span class="text-label relative">
+                                    Migrar para NGINX
+                                </span>
+                            </label>
+                        </div>
+                        <div class="linha">
+                            <span class="legenda relative">
+                                <i class="label-quadrado inline-block bg-roxo absolute"></i> Projeto:
+                            </span> <span class="text-label">Admin do Sistema</span>
+                        </div>
+                        <div class="linha-odd linha clearfix">
+                            <div>
+                                <span class="legenda relative">
+                                    <i class="label-circulo inline-block bg-vermelho absolute"></i> Prioridade:
+                                </span> <span class="text-label">Alta</span>
+                            </div>
+
+                            <div>
+                                <span class="legenda relative">
+                                    Prazo:
+                                </span> <span class="text-label">Hoje</span>
+                            </div>
+
+                            <hr class="hr-card"></hr>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetu adipiscing elit. Nunc ac diam mattis.
+                            </p>
+                        </div>
+                        <div class="comentarios linha">
+                            <div class="comentario relative">
+                                <img src="img/avatar-fem.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Carolina Elias</strong>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit.
+                                    Nullam pharetra imperdiet
+                                    vestibulum sodales.
+                                </p>
+                            </div>
+                            <div class="comentario relative">
+                                <img src="img/avatar-masc.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Willian Matiola</strong>
+
+                                <p>
+                                    Morbi fermentum euvelit! Nullam pharetra imperdiet.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="linha-form linha">
+                            <form class="form-comentario">
+                                <input type="text" name="comentario" class="campo-comentario form-control" placeholder="Add comment …">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="linha linha-grande">
+                            <label class="label-checkbox relative">
+                                <input class="pull-left" name="task" type="checkbox" value="Integrar Paypal e Stripe no checkout">
+                                <span class="text-label relative">
+                                    Consertar erros na versão mobile
+                                </span>
+                            </label>
+                        </div>
+                        <div class="linha">
+                            <span class="legenda relative">
+                                <i class="label-quadrado inline-block bg-roxo absolute"></i> Projeto:
+                            </span> <span class="text-label">Aplicações Mobile</span>
+                        </div>
+                        <div class="linha-odd linha clearfix">
+                            <div>
+                                <span class="legenda relative">
+                                    <i class="label-circulo inline-block bg-amarelo absolute"></i> Prioridade:
+                                </span> <span class="text-label">Média</span>
+                            </div>
+
+                            <div>
+                                <span class="legenda relative">
+                                    Prazo:
+                                </span> <span class="text-label">Amanhã</span>
+                            </div>
+
+                            <hr class="hr-card"></hr>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetu adipiscing elit. Nunc ac diam mattis.
+                            </p>
+                        </div>
+                        <div class="comentarios linha">
+                            <div class="comentario relative">
+                                <img src="img/avatar-fem.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Carolina Elias</strong>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit.
+                                    Nullam pharetra imperdiet
+                                    vestibulum sodales.
+                                </p>
+                            </div>
+                            <div class="comentario relative">
+                                <img src="img/avatar-fem.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Carolina Elias</strong>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit.
+                                    Nullam pharetra imperdiet
+                                    vestibulum sodales.
+                                </p>
+                            </div>
+                            <div class="comentario relative">
+                                <img src="img/avatar-fem.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Carolina Elias</strong>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit.
+                                    Nullam pharetra imperdiet
+                                    vestibulum sodales.
+                                </p>
+                            </div>
+                            <div class="comentario relative">
+                                <img src="img/avatar-fem.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Carolina Elias</strong>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit.
+                                    Nullam pharetra imperdiet
+                                    vestibulum sodales.
+                                </p>
+                            </div>
+                            <div class="comentario relative">
+                                <img src="img/avatar-fem.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Carolina Elias</strong>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit.
+                                    Nullam pharetra imperdiet
+                                    vestibulum sodales.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="linha-form linha">
+                            <form class="form-comentario">
+                                <input type="text" name="comentario" class="campo-comentario form-control" placeholder="Add comment …">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="linha linha-grande">
+                            <label class="label-checkbox relative">
+                                <input class="pull-left" name="task" checked type="checkbox" value="Criar template de email para lembrar usuários de trocarem as senhas">
+                                <span class="text-label relative">
+                                    Criar template de email para lembrar usuários de trocarem as senhas
+                                </span>
+                            </label>
+                        </div>
+                        <div class="linha">
+                            <span class="legenda relative">
+                                <i class="label-quadrado inline-block bg-vermelho absolute"></i> Projeto:
+                            </span> <span class="text-label">Aplicações Mobile</span>
+                        </div>
+                        <div class="linha-odd linha clearfix">
+                            <div>
+                                <span class="legenda relative">
+                                    <i class="label-circulo inline-block bg-vermelho absolute"></i> Prioridade:
+                                </span> <span class="text-label">Alta</span>
+                            </div>
+
+                            <div>
+                                <span class="legenda relative">
+                                    Prazo:
+                                </span> <span class="text-label">Hoje</span>
+                            </div>
+
+                            <hr class="hr-card"></hr>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetu adipiscing elit. Nunc ac diam mattis.
+                            </p>
+                        </div>
+                        <div class="comentarios linha">
+                            <div class="comentario relative">
+                                <img src="img/avatar-masc.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Welliton Matiola</strong>
+
+                                <p>
+                                    Vestibulum sodales metus. Semper nunc faucibus integer!
+                                </p>
+                            </div>
+                            <div class="comentario relative">
+                                <img src="img/avatar-fem.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Carolina Elias</strong>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit.
+                                    Nullam pharetra imperdiet
+                                    vestibulum sodales.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="linha-form linha">
+                            <form class="form-comentario">
+                                <input type="text" name="comentario" class="campo-comentario form-control" placeholder="Add comment …">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="linha linha-grande">
+                            <label class="label-checkbox relative">
+                                <input class="pull-left" name="task" checked type="checkbox" value="Integrar Paypal e Stripe no checkout">
+                                <span class="text-label relative">
+                                    Criar wireframes de alta fidelidade para Nike+
+                                </span>
+                            </label>
+                        </div>
+                        <div class="linha">
+                            <span class="legenda relative">
+                                <i class="label-quadrado inline-block bg-verde absolute"></i> Projeto:
+                            </span> <span class="text-label">Admin do Sistema</span>
+                        </div>
+                        <div class="linha-odd linha clearfix">
+                            <div>
+                                <span class="legenda relative">
+                                    <i class="label-circulo inline-block bg-amarelo absolute"></i> Prioridade:
+                                </span> <span class="text-label">Média</span>
+                            </div>
+
+                            <div>
+                                <span class="legenda relative">
+                                    Prazo:
+                                </span> <span class="text-label">Hoje</span>
+                            </div>
+
+                            <hr class="hr-card"></hr>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetu adipiscing elit. Nunc ac diam mattis.
+                            </p>
+                        </div>
+                        <div class="comentarios linha">
+                            <div class="comentario relative">
+                                <img src="img/avatar-masc.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Welliton Matiola</strong>
+
+                                <p>
+                                    Vestibulum sodales metus. Semper nunc faucibus integer!
+                                </p>
+                            </div>
+                            <div class="comentario relative">
+                                <img src="img/avatar-fem.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Renata Barros</strong>
+
+                                <p>
+                                    Vestibulum sodales metus.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="linha-form linha">
+                            <form class="form-comentario">
+                                <input type="text" name="comentario" class="campo-comentario form-control" placeholder="Add comment …">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="linha linha-grande">
+                            <label class="label-checkbox relative">
+                                <input class="pull-left" name="task" type="checkbox" value="Integrar Paypal e Stripe no checkout">
+                                <span class="text-label relative">
+                                    Instalar verificação de segurança nas contas dos usuários
+                                </span>
+                            </label>
+                        </div>
+                        <div class="linha">
+                            <span class="legenda relative">
+                                <i class="label-quadrado inline-block bg-roxo absolute"></i> Projeto:
+                            </span> <span class="text-label">Admin do Sistema</span>
+                        </div>
+                        <div class="linha-odd linha clearfix">
+                            <div>
+                                <span class="legenda relative">
+                                    <i class="label-circulo inline-block bg-verde absolute"></i> Prioridade:
+                                </span> <span class="text-label">Baixa</span>
+                            </div>
+
+                            <div>
+                                <span class="legenda relative">
+                                    Prazo:
+                                </span> <span class="text-label">Hoje</span>
+                            </div>
+
+                            <hr class="hr-card"></hr>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetu adipiscing elit. Nunc ac diam mattis.
+                            </p>
+                        </div>
+                        <div class="comentarios linha">
+                            <div class="comentario relative">
+                                <img src="img/avatar-masc.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Helder Burato</strong>
+
+                                <p>
+                                    Vestibulum sodales metus. Semper nunc faucibus integer!
+                                </p>
+                            </div>
+                            <div class="comentario relative">
+                                <img src="img/avatar-fem.png" height="48" width="48" class="img-responsive absolute">
+
+                                <strong class="nome show">Letícia Souza</strong>
+
+                                <p>
+                                    Vestibulum sodales metus.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="linha-form linha">
+                            <form class="form-comentario">
+                                <input type="text" name="comentario" class="campo-comentario form-control" placeholder="Add comment …">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
 </body>
